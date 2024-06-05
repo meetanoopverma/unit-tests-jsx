@@ -8,6 +8,8 @@ describe("JSX Practice exercises", () => {
      * such that it says "Hello, John Doe!"
      *
      * Read the value from the `name` variable
+     *
+     *
      */
     test("hello john doe", () => {
       const name = "John Doe";
@@ -53,9 +55,14 @@ describe("JSX Practice exercises", () => {
       const html = `<img src="https://placekitten.com/200/300" style="border: 1px solid blue;" />`;
 
       const ProfileImage = () => {
-        return <div>
-          <img src="https://placekitten.com/200/300" style={{ border: "1px solid blue" }} />
-        </div>;
+        return (
+          <div>
+            <img
+              src="https://placekitten.com/200/300"
+              style={{ border: "1px solid blue" }}
+            />
+          </div>
+        );
       };
 
       render(<ProfileImage />);
@@ -158,17 +165,16 @@ describe("JSX Practice exercises", () => {
   `;
 
       const LearnReactSection = () => {
-        return(
+        return (
           <div>
-              <h1>Learn React</h1>
-              <ul>
-                  <li>Describing the UI</li>
-                  <li>Adding interactivity</li>
-                  <li>Managing state</li>
-              </ul>
+            <h1>Learn React</h1>
+            <ul>
+              <li>Describing the UI</li>
+              <li>Adding interactivity</li>
+              <li>Managing state</li>
+            </ul>
           </div>
-          
-        )
+        );
       };
 
       render(<LearnReactSection />);
@@ -191,14 +197,12 @@ describe("JSX Practice exercises", () => {
   `;
 
       const Profile = () => {
-        return(
+        return (
           <div>
-          <h1>John Doe</h1>
-          <img src="https://placekitten.com/200/300" />
-      </div>
-        )
-
-
+            <h1>John Doe</h1>
+            <img src="https://placekitten.com/200/300" />
+          </div>
+        );
       };
 
       render(<Profile />);
@@ -216,12 +220,12 @@ describe("JSX Practice exercises", () => {
           <img src="https://placekitten.com/200/300"/>
       `;
       const Profile = () => {
-        return(
+        return (
           <>
-          <h1>John Doe</h1>
-          <img src="https://placekitten.com/200/300"/>
+            <h1>John Doe</h1>
+            <img src="https://placekitten.com/200/300" />
           </>
-        )
+        );
       };
 
       render(<Profile />);
@@ -237,11 +241,11 @@ describe("JSX Practice exercises", () => {
       const html = `<img src="https://placekitten.com/200/300" class="photo" />`;
 
       const ProfileImage = () => {
-        return(
+        return (
           <>
-          <img src="https://placekitten.com/200/300" class="photo" />
+            <img src="https://placekitten.com/200/300" class="photo" />
           </>
-        )
+        );
       };
 
       render(<ProfileImage />);
@@ -256,12 +260,13 @@ describe("JSX Practice exercises", () => {
       const html = `<section data-testid="blueberry"><h1>BlueBerry INC</h1></section>`;
 
       const CustomerCard = () => {
-        return(
+        return (
           <>
-          <section data-testid="blueberry"><h1>BlueBerry INC</h1></section>
+            <section data-testid="blueberry">
+              <h1>BlueBerry INC</h1>
+            </section>
           </>
-        )
-
+        );
       };
 
       render(<CustomerCard />);
@@ -276,11 +281,14 @@ describe("JSX Practice exercises", () => {
       const html = `<img src="https://placekitten.com/200/300" style="border-color: red;" />`;
 
       const ProfileImage = () => {
-        return(
+        return (
           <>
-          <img src="https://placekitten.com/200/300" style={{borderColor: "red"} } />
+            <img
+              src="https://placekitten.com/200/300"
+              style={{ borderColor: "red" }}
+            />
           </>
-        )
+        );
       };
 
       render(<ProfileImage />);
@@ -290,4 +298,4 @@ describe("JSX Practice exercises", () => {
       );
     });
   });
- });
+});
